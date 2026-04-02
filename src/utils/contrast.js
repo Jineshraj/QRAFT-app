@@ -1,3 +1,4 @@
+// Convert hex color to numeric RGB object.
 export function hexToRgbObj(hex) {
   const r = parseInt(hex.slice(1, 3), 16)
   const g = parseInt(hex.slice(3, 5), 16)
@@ -5,6 +6,7 @@ export function hexToRgbObj(hex) {
   return { r, g, b }
 }
 
+// Relative luminance per WCAG.
 export function luminance({ r, g, b }) {
   const srgb = [r, g, b].map(v => {
     const c = v / 255
@@ -13,6 +15,7 @@ export function luminance({ r, g, b }) {
   return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2]
 }
 
+// Contrast ratio between two hex colors.
 export function contrastRatio(a, b) {
   const la = luminance(hexToRgbObj(a))
   const lb = luminance(hexToRgbObj(b))

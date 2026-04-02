@@ -1,8 +1,22 @@
 {
-  "name": "upi-qr-studio",
-  "version": "2.0.0",
+  "name": "qraft",
+  "version": "0.1.0",
   "description": "UPI QR & Label Generator — Modern UI",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

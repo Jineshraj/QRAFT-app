@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles as s } from '../styles/appStyles'
 
+// Inline warning shown when QR color contrast is too low.
 export default function ContrastWarning({ show }) {
   if (!show) return null
   return (

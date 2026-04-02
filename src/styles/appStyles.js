@@ -1,6 +1,8 @@
 export const styles = {
+  // App container
   root: { display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden', background: 'var(--bg)' },
 
+  // Top bar and brand
   topbar: {
     height: 64,
     background: 'linear-gradient(180deg, rgba(26,26,30,0.96), rgba(20,20,24,0.96))',
@@ -23,6 +25,7 @@ export const styles = {
     padding: '2px 7px', borderRadius: 20, border: '1px solid rgba(110,231,183,0.2)',
   },
 
+  // Step navigation
   steps: { display: 'flex', gap: 4, flex: 1, justifyContent: 'center' },
   stepBtn: {
     display: 'flex', alignItems: 'center', gap: 6,
@@ -33,22 +36,27 @@ export const styles = {
   stepActive: { background: 'var(--accent-dim)', color: 'var(--accent)', border: '1px solid rgba(110,231,183,0.3)' },
   stepDone:   { color: 'var(--text-2)', border: '1px solid var(--border-mid)' },
 
+  // Top bar actions
   resetBtn: {
     marginLeft: 'auto', fontSize: 12, color: 'var(--text-2)', background: 'var(--bg-3)',
     border: '1px solid var(--border-mid)', borderRadius: 10, padding: '6px 14px', cursor: 'pointer',
     fontFamily: 'var(--font)', transition: 'all 0.15s',
   },
 
+  // Two-column layout
   layout: { display: 'grid', gridTemplateColumns: '420px 1fr', flex: 1, overflow: 'hidden' },
 
+  // Form column
   formCol: { borderRight: '1px solid var(--border)', overflow: 'hidden', display: 'flex', flexDirection: 'column' },
   formScroll: { flex: 1, overflowY: 'auto', padding: '0' },
 
+  // Step panels
   stepPanel: { padding: '28px 28px 40px', animation: 'fadeUp 0.25s ease' },
   stepHeader: { marginBottom: 28 },
   stepTitle: { fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text)', marginBottom: 5 },
   stepSub: { fontSize: 13, color: 'var(--text-3)', lineHeight: 1.5 },
 
+  // Form field helpers
   rupeePrefix: {
     position: 'absolute', left: 13, top: '50%', transform: 'translateY(-50%)',
     fontSize: 15, color: 'var(--text-2)', pointerEvents: 'none', zIndex: 1,
@@ -64,6 +72,7 @@ export const styles = {
     flexShrink: 0, marginTop: 3, animation: 'pulse-ring 2s infinite',
   },
 
+  // Logo upload area
   logoArea: { marginTop: 2 },
   uploadZone: {
     width: '100%', padding: '24px 16px', background: 'var(--bg-3)',
@@ -80,6 +89,7 @@ export const styles = {
     cursor: 'pointer', fontFamily: 'var(--font)',
   },
 
+  // Color pickers
   presetsGrid: { display: 'flex', gap: 8, flexWrap: 'wrap' },
   presetDot: {
     width: 28, height: 28, borderRadius: '50%', cursor: 'pointer',
@@ -95,6 +105,7 @@ export const styles = {
   },
   colorInput: { width: 30, height: 30, border: 'none', borderRadius: 6, cursor: 'pointer', padding: 0, background: 'transparent' },
 
+  // Frame selector
   framesGrid: { display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8 },
   frameBtn: {
     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5,
@@ -104,6 +115,7 @@ export const styles = {
   },
   frameBtnActive: { border: '1.5px solid rgba(110,231,183,0.4)', background: 'var(--accent-dim)' },
 
+  // Size selector
   sizeRow: { display: 'flex', gap: 8 },
   sizeBtn: {
     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3,
@@ -113,6 +125,7 @@ export const styles = {
   },
   sizeBtnActive: { border: '1.5px solid rgba(110,231,183,0.4)', background: 'var(--accent-dim)' },
 
+  // Step navigation buttons
   navBack: {
     height: 40, padding: '0 18px', background: 'var(--bg-3)',
     border: '1px solid var(--border-mid)', borderRadius: 10,
@@ -126,9 +139,11 @@ export const styles = {
   },
   navDisabled: { opacity: 0.35, cursor: 'not-allowed' },
 
+  // Preview column
   previewCol: { background: 'var(--bg)', display: 'flex', alignItems: 'stretch', overflow: 'hidden' },
   previewInner: { flex: 1, display: 'flex', flexDirection: 'column', padding: 24, gap: 16, overflow: 'hidden' },
 
+  // Preview header
   previewTopRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
   previewLabel: { display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 600, color: 'var(--text-3)', letterSpacing: '0.06em', textTransform: 'uppercase' },
   liveDot: { width: 7, height: 7, borderRadius: '50%', background: 'var(--accent)', animation: 'pulse-ring 2s infinite' },
@@ -138,6 +153,7 @@ export const styles = {
     cursor: 'pointer', fontFamily: 'var(--font)', transition: 'color 0.15s',
   },
 
+  // Preview canvas
   previewCanvas: {
     flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
     background: 'var(--bg-2)', borderRadius: 16, border: '1px solid var(--border)',
@@ -147,6 +163,7 @@ export const styles = {
   },
   previewCanvasBig: { padding: 40 },
 
+  // Export buttons
   exportRow: {
     display: 'flex', gap: 8,
   },
@@ -160,6 +177,7 @@ export const styles = {
   expPrimary: {
     background: 'var(--accent)', border: 'none', color: '#052e16', fontWeight: 700,
   },
+  // Contrast warning
   contrastWarn: {
     marginTop: -6,
     background: 'rgba(251,191,36,0.08)',
@@ -170,6 +188,7 @@ export const styles = {
     fontSize: 12,
     lineHeight: 1.4,
   },
+  // Footer disclaimer
   footer: {
     fontSize: 11,
     color: 'var(--text-3)',

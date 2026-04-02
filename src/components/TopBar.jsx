@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles as s } from '../styles/appStyles'
 
+// Sticky header with brand, reset action, and step navigation.
 export default function TopBar({ step, setStep, reset, steps, stepBtnStyle, stepsStyle, brandStyle, resetStyle, topbarStyle }) {
   return (
     <header style={topbarStyle}>

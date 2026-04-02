@@ -1,3 +1,4 @@
+// Color theme presets (accent, background, text, QR).
 export const PRESETS = [
   { name: 'Forest',  primary: '#16a34a', bg: '#f0fdf4', text: '#14532d', qr: '#14532d' },
   { name: 'Ocean',   primary: '#0ea5e9', bg: '#f0f9ff', text: '#0c4a6e', qr: '#0c4a6e' },
@@ -9,6 +10,7 @@ export const PRESETS = [
   { name: 'Teal',    primary: '#0d9488', bg: '#f0fdfa', text: '#134e4a', qr: '#134e4a' },
 ]
 
+// Frame style options for the label.
 export const FRAMES = [
   { id: 'minimal',  label: 'Clean',    desc: 'Floating card' },
   { id: 'bordered', label: 'Bold',     desc: 'Thick border' },
@@ -16,6 +18,7 @@ export const FRAMES = [
   { id: 'receipt',  label: 'Receipt',  desc: 'Dashed edge' },
 ]
 
+// Output size presets for the label.
 export const SIZES = [
   { id: 'sm', label: 'S', w: '270', h: '~340' },
   { id: 'md', label: 'M', w: '330', h: '~410' },
@@ -23,6 +26,7 @@ export const SIZES = [
   { id: 'sq', label: 'SQ', w: '360', h: '360' },
 ]
 
+// Step metadata for the wizard top bar.
 export const STEPS = [
   { id: 'upi',     icon: '1', label: 'Payment' },
   { id: 'brand',   icon: '2', label: 'Branding' },

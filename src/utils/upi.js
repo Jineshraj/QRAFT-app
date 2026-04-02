@@ -1,3 +1,4 @@
+// Build the UPI payment URI from user inputs.
 export function buildUPIString({ upiId, payee, amount, note }) {
   let str = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(payee)}`
   if (amount && parseFloat(amount) > 0) str += `&am=${parseFloat(amount).toFixed(2)}`
@@ -6,6 +7,7 @@ export function buildUPIString({ upiId, payee, amount, note }) {
   return str
 }
 
+// Encode current generator state into a shareable query string.
 export function encodeShareParams(state) {
   const p = new URLSearchParams({
     pa: state.upiId, pn: state.payee, am: state.amount, tn: state.note,
@@ -19,6 +21,7 @@ export function encodeShareParams(state) {
   return p.toString()
 }
 
+// Decode query params into generator state (or null if missing).
 export function decodeShareParams(search) {
   const p = new URLSearchParams(search)
   if (!p.get('pa')) return null
@@ -38,6 +41,7 @@ export function decodeShareParams(search) {
   }
 }
 
+// Convert hex color to "r,g,b" string for inline rgba usage.
 export function hexToRgb(hex) {
   const r = parseInt(hex.slice(1,3),16)
   const g = parseInt(hex.slice(3,5),16)
@@ -45,6 +49,7 @@ export function hexToRgb(hex) {
   return `${r},${g},${b}`
 }
 
+// Format numbers to Indian locale for currency display.
 export function formatINR(amount) {
   return parseFloat(amount).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 2 })
 }

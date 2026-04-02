@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles as s } from '../styles/appStyles'
 
+// Static disclaimer shown at the bottom of the app.
 export default function Footer() {
   return (
     <footer style={s.footer}>

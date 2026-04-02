@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles as s } from '../styles/appStyles'
 
+// Labeled field wrapper with optional hint and required marker.
 export function Field({ label, hint, required, children }) {
   return (
     <div style={{ marginBottom: 20 }}>
@@ -16,6 +17,7 @@ export function Field({ label, hint, required, children }) {
   )
 }
 
+// Text input with optional mono font and validation indicator.
 export function Input({ value, onChange, placeholder, mono, valid, type = 'text', style: extra = {} }) {
   return (
     <div style={{ position: 'relative' }}>
@@ -48,6 +50,7 @@ export function Input({ value, onChange, placeholder, mono, valid, type = 'text'
   )
 }
 
+// Step navigation controls used across wizard panels.
 export function NavButtons({ step, setStep, canNext, last }) {
   return (
     <div style={{ display: 'flex', gap: 10, marginTop: 28, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
@@ -72,6 +75,7 @@ export function NavButtons({ step, setStep, canNext, last }) {
   )
 }
 
+// Small icon previews for frame selector tiles.
 export function FrameIcon({ id, color }) {
   const c = color || 'currentColor'
   if (id === 'minimal') return <svg width="28" height="22" viewBox="0 0 28 22"><rect x="1" y="1" width="26" height="20" rx="4" fill="none" stroke={c} strokeWidth="1.5"/></svg>
@@ -81,10 +85,12 @@ export function FrameIcon({ id, color }) {
   return null
 }
 
+// Spinner shown during export operations.
 export function Spinner() {
   return <div style={{ width: 13, height: 13, border: '2px solid rgba(255,255,255,0.3)', borderTopColor: 'white', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }}/>
 }
 
+// Export action icons.
 export function DownIcon()  { return <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4v-2h14v2H5z"/></svg> }
 export function PrintIcon() { return <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg> }
 export function ShareIcon() { return <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> }

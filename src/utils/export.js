@@ -1,21 +1,25 @@
 import html2canvas from 'html2canvas'
 
+// Render the label node to a canvas using html2canvas.
 export async function captureLabel(elementId = 'label-inner') {
   const el = document.getElementById(elementId)
   if (!el) throw new Error('Label element not found')
   return await html2canvas(el, { scale: 3, useCORS: true, backgroundColor: null, logging: false })
 }
 
+// Download the label as a PNG file.
 export async function downloadPNG() {
   const canvas = await captureLabel()
   trigger(canvas.toDataURL('image/png'), 'upi-label.png')
 }
 
+// Download the label as a JPG file.
 export async function downloadJPG() {
   const canvas = await captureLabel()
   trigger(canvas.toDataURL('image/jpeg', 0.95), 'upi-label.jpg')
 }
 
+// Open a print window with the label markup.
 export function printLabel() {
   const el = document.getElementById('label-inner')
   if (!el) return
@@ -28,6 +32,7 @@ export function printLabel() {
   win.onload = () => { win.focus(); win.print() }
 }
 
+// Programmatically trigger a download in the browser.
 function trigger(dataUrl, filename) {
   const a = document.createElement('a')
   a.href = dataUrl; a.download = filename; a.click()
